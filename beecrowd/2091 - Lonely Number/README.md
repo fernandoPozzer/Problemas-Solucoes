@@ -1,6 +1,18 @@
-# Problema 2091 - Lonely Number
+# Problema [2091 - Lonely Number](https://www.beecrowd.com.br/judge/pt/problems/view/2091)
 
-## Solução 1:
+Será dado a você um vetor com N números, onde todos estarão em pares. Porém um desses números acabou
+ficando sem par, você consegue identificar qual é esse número ?
+
+Por exemplo, A = {1, 1, 3, 3, 5, 5, 5}, o número que ficou sozinho foi o 5.
+
+### Entrada
+A entrada é composta por vários casos de teste. Cada caso de teste é composto por uma linha contendo um inteiro N (1 ≤ N < 10^5), seguida por N números A (0 ≤ A ≤ 10^12). A entrada termina quando N = 0 e não deve ser processada.
+
+### Saída
+Para cada caso de teste imprima apenas o número que ficou sozinho. É garantido que apenas um número está sozinho.
+
+<details>
+  <summary>Solução 1:</summary>
 
 Uma forma simples é criando um array (bucket) onde o valor de cada entrada é usado
 como índice dentro do array de bucket. O array guarda o número de ocorrências de cada entrada.
@@ -21,7 +33,9 @@ Pelo enunciado do problema temos (1≤ A ≤10^12), ou seja, deve-se alocar um a
 1,000,000,000,001 elementos, ou seja, 1 TB de memória. A maioria deste espaço não vai ser
 utilizada pois a entrada tem apenas 100.000 elementos.
 
-## Solução 2:
+</details>
+<details>
+    <summary>Solução 2</summary>
 
 Pode-se também guardar os valores em um array de tamanho N de forma sequencial e
 então fazer buscas O(N) para descobrir se existem número impar de elementos. Esta solução pode
@@ -94,10 +108,9 @@ int main() {
     return 0;
 }
 ```
-
-
-
-## Solução 3:
+</details>
+<details>
+    <summary>Solução 3</summary>
 
 Uma solução mais eficiente (que não utiliza tanta memória em relação a primeira
 solução) consiste em usar uma estrutura <map> da linguagem C++, que não necessita prealocar um
@@ -137,8 +150,9 @@ int main()
 }
 ```
 
-
-## Solução 4:
+</details>
+<details>
+    <summary>Solução 4</summary>
 
 Faz uso de operações bitwise, com o operador XOR. Para cada entrada, faz-se um
 XOR com o valor corrente. Um número par de bits 1 se anula. Faz inserção em tempo O(1) e
@@ -176,4 +190,6 @@ int main() {
     }
     return 0;
 }
-```^ 
+```
+
+</details>
