@@ -1,4 +1,4 @@
-# Problema [0000 - Template]()
+# Problema [1068 - Balanço de Parênteses I](https://www.beecrowd.com.br/judge/pt/problems/view/1068)
 
 Neste problema sua tarefa será ler vários números e em seguida dizer quantas vezes cada número aparece na entrada de dados, ou seja, deve-se escrever cada um dos valores distintos que aparecem na entrada por ordem crescente de valor.
 
