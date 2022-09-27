@@ -28,4 +28,7 @@ Abaixo um desenho para representar mais ou menos a recursão falada:
 
 ![image](mostrar.png)
 
+
+- [Luiz H. Lago](https://github.com/crazynds)
+
 </details>

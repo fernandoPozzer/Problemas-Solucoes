@@ -6,7 +6,7 @@ Esse repositório contém diversos problemas e suas soluções, com a explicaç�
 
 ## Contribuidores
 
--[Crazynds](https://github.com/crazynds)
+- [Luiz H. Lago](https://github.com/crazynds)
 
 
 

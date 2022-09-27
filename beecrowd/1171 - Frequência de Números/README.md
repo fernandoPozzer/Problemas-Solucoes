@@ -17,4 +17,7 @@ Como o range de numeros que vai ter no input é pequeno, a ideia dessa solução
 Após ler todos os numeros e incrementar na casa equivalente, é percorrido o array e buscando cassas que o numero é maior que zero, então é printado na tela.
 
 
+
+- [Luiz H. Lago](https://github.com/crazynds)
+
 </details>

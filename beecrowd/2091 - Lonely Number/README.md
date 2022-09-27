@@ -108,6 +108,8 @@ int main() {
     return 0;
 }
 ```
+
+- [Luiz H. Lago](https://github.com/crazynds)
 </details>
 <details>
     <summary>Solução 3</summary>

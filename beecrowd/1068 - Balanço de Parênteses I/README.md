@@ -26,9 +26,9 @@ O arquivo de saída deverá ter a quantidade de linhas correspondente ao arquivo
 
 A ideia dessa solução é percorrer a string de manter uma contagem de quantos parenteses estão abertos, ao se em algum momento essa contagem for menor que zero então um parenteses foi fechado sem nenhum ter sido aberto para aquele e o loop finaliza. Se algum parenteses foi aberto sem outro ser fechado, então a variavel de contagem vai ser diferente de zero ao final.
 
-Então se alguma dessas condições acontecer, é exibido __incorrect__, caso contrário é exibido __correct__
+Então se alguma dessas condições acontecer, é exibido __incorrect__, caso contrário é exibido __correct__.
 
-Então 
 
+- [Luiz H. Lago](https://github.com/crazynds)
 
 </details>

@@ -17,4 +17,7 @@ Basicamente é receber os inputs e calcular a média ponderada com os pessos def
 
 Questões comum de erro nesse exercício é a falta do print do float com apenas 1 casa decimal, esquecer de printar textos com o **.** no final da frase ou caso o aluno tirar menos que 5 na primeira média, ele reprova direto ao invez de esperar um input de recuperação.
 
+
+- [Luiz H. Lago](https://github.com/crazynds)
+
 </details>
