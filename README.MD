@@ -7,6 +7,7 @@ Esse repositório contém diversos problemas e suas soluções, com a explicaç�
 ## Contribuidores
 
 - [Luiz H. Lago](https://github.com/crazynds)
+- [Natã Schmitt](https://github.com/NatasFX)
 
 
 
