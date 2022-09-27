@@ -18,5 +18,6 @@ Para cada caso de teste imprima a mensagem “Prime” (Primo) ou “Not Prime�
    - Computar todos os números primos até a entrada máxima (2^31) é muito custoso, então vou computar todos so numeros primos até o sqrt(2^31), ou seja, até 46340
    - Se o número V informado for menor que 46340, então é feito uma busca binária no array de números primos, se ele for maior, então é feito uma checagem de todos os números primos menores que sqrt(V) do array se o resto é zero ou não.
 
-  Essa solução utiliza diversas otimizações com que fazem que ela seja muito rápida,
+
+- [Luiz H. Lago](https://github.com/crazynds)
 </details>

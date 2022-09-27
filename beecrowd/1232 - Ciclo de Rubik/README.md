@@ -54,4 +54,7 @@ void rotacionaF(char* c){
 ```
 Outro ponto interessante é que não é necessário implementar a rotação reversa, no caso é só executar a rotação normal 3 vezes que o resultado vai ser o mesmo da rotação reversa. 
 
+
+- [Luiz H. Lago](https://github.com/crazynds)
+
 </details>

@@ -12,8 +12,8 @@ Você deve imprimir a quantidade de diamantes possíveis de serem extraídos em 
 <details>
   <summary>Solução 1:</summary>
 
+  A solução para esse problema envolve manter uma contagem de '<' abertos, e sempre que tem um fechamento ('>') é decrementado a contagem, e incrementado o numero de diamantes. Se a contagem for zero e encontrar um fechamento, então não é decrementado e também não é incrementado o numero de diamante. 
 
-  A solução para esse problema envolve manter uma contagem de '<' abertos, e sempre que tem um fechamento ('>') é decrementado a contagem, e incrementado o numero de diamantes. Se a contagem for zero e encontrar um fechamento, então não é decrementado e nem incrementado numero de diamante. 
-
+- [Luiz H. Lago](https://github.com/crazynds)
 
 </details>
