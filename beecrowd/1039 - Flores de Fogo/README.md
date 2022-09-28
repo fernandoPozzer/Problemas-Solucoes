@@ -25,4 +25,7 @@ Para cada instância imprima uma única linha contendo MORTO, se o caçador morr
   
   ![imagem](./solucao1.png)
 
+  
+- [Luiz H. Lago](https://github.com/crazynds)
+
 </details>
