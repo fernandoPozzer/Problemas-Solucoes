@@ -38,5 +38,6 @@ Para cada um dos casos de teste da entrada, seu programa deve imprimir uma únic
 
   No __return__ eu só verifico se eu preenchi todas as linhas necessárias, se não eu retorno -1 (impossivel), se eu preenchi eu retorno o número de tábuas utilizadas. Algumas observações são que se em alguma etapa eu já preenchi todas as linhas necessárias eu devo pular proximas etapas até a verificação do return, e se eu tiver mais linhas preenchidas que o que necessário, possivelmente estou utilizando mais tábuas que o mínimo, então vai estar errado a resposta.
 
+- [Luiz H. Lago](https://github.com/crazynds)
 
 </details>
