@@ -20,4 +20,9 @@ Para cada caso de teste, imprima uma única linha contendo o caractere 'Y' se a 
 <details>
   <summary>Solução 1:</summary>
 
+  Nessa solução foi transformado a frase em lower case e feito um split nos espaços, separando cada palavra em uma string diferente. Após isso foi feita uma comparação se todas as palavras iniciavam com o mesmo char. Se sim, então ele printava Y, se não printava N.
+
+  
+- [Luiz H. Lago](https://github.com/crazynds)
+
 </details>
