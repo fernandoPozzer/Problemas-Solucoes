@@ -23,12 +23,12 @@ while 1:
     else:
         high = max_n
         low  = 0
-        for _ in range(52):
+        for _ in range(35):
             mid = (high+low) / 2
             cut_area = cut(mid)
             if cut_area > a:
-                low = mid-.01
+                low = mid
             else:
-                high = mid+.01
+                high = mid
 
         stdout.write(f'{mid:.4f}\n')
