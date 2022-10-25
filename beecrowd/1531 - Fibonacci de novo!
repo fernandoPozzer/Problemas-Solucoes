@@ -1,0 +1,124 @@
+# Problema [1531 - Fibonacci de novo!]()
+
+A famosa sequência de Fibonacci pode ser definida da seguinte maneira:
+
+  Fib( 1 ) = Fib( 2 ) = 1
+  Fib( N ) = Fib( N-1 ) + Fib( N-2 ), para N > 2
+  
+Sua tarefa é simples, calcular o valor do resto de Fib( Fib( N ) ) por M.
+
+##Entrada
+A entrada é composta por vários casos de teste e termina com EOF. Cada caso de teste consiste de uma linha com dois inteiros N e M (1 ≤ N ≤ 109, 2 ≤ M ≤ 106).
+
+##Saída
+Para cada caso de teste, imprima uma linha contendo um inteiro igual ao resto de Fib( Fib( N ) ) por M.
+
+<details>
+  <summary>Solução 1:</summary>
+  
+  Essa questão envolve otimização com relação ao cálculo de fibonacci (deve ser utilizado o algoritmo baseado em potenciacao de matriz) e período de Pisano.
+  Toda a sequência de Fibonacci mod m é periódica. O período de Pisano é o cálculo do tamanho desse período. 
+  
+  Considere que o período de pisano é representado por p(n).
+  
+  A chave para essa questão é utilizar a seguinte propriedade: fib(n) mod m = fib(n mod p(m)) mod m
+  
+  ```C++
+    #include<iostream>
+
+    typedef long long int ll;
+
+    using namespace std;
+
+    void mult(ll m[2][2], ll m2[2][2], ll mod)
+    {
+        ll a = (m[0][0] * m2[0][0]) % mod + (m[0][1] * m2[1][0]) % mod;
+        ll b = (m[0][0] * m2[0][1]) % mod + (m[0][1] * m2[1][1]) % mod;
+        ll c = (m[1][0] * m2[0][0]) % mod + (m[1][1] * m2[1][0]) % mod;
+        ll d = (m[1][0] * m2[0][1]) % mod + (m[1][1] * m2[1][1]) % mod;
+
+        m[0][0] = a % mod;
+        m[0][1] = b % mod;
+        m[1][0] = c % mod;
+        m[1][1] = d % mod;
+    }
+
+    int getBit_64(ll n, int shiftLeft)
+    {
+        ll mask = (ll)1 << shiftLeft;
+
+        if((n & mask) != 0)
+            return 1;
+
+        return 0;
+    }
+
+    int msb_64(ll n)
+    {
+        for(int i = 63; i >= 0; i--)
+        {
+            if(getBit_64(n, i) == 1)
+                return i;
+        }
+
+        return -1;
+    }
+
+    ll fibRapido(ll n, ll mod)
+    {
+        if(n == 0)
+            return 0;
+
+        int msbN = msb_64(n);
+
+        ll resp[2][2] = {{1,0},{0,1}}; // matriz identidade
+        ll fator[2][2] = {{1,1},{1,0}};
+
+        for(int i = 0; i <= msbN; i++)
+        {
+            if(getBit_64(n, i) == 1)
+            {
+                mult(resp, fator, mod);
+            }
+
+            mult(fator, fator, mod);
+        }
+
+        return resp[0][1];
+    }
+
+    ll pisano(ll m)
+    {
+        ll a = 0, b = 1, c = a + b;
+
+        for (int i = 0; i < m * m; i++)
+        {
+            c = (a + b) % m;
+            a = b;
+            b = c;
+            if (a == 0 && b == 1)
+                return i + 1;
+        }
+    }
+
+    int main()
+    {
+        ll n, m, k, p, aux;
+
+        while(cin >> n >> m)
+        {
+            k = pisano(m);
+            p = pisano(k);
+
+            aux = fibRapido(n % p, k);
+            aux = fibRapido(aux, m);
+
+            cout << aux << endl;
+        }
+
+        return 0;
+    }
+
+  ```
+
+</details>
